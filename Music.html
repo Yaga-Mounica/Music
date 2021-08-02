@@ -1,0 +1,63 @@
+
+ <head>
+ 
+  <title>Music_player</title>
+  <link rel="stylesheet" href="Music.css"></link>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+ </head>
+ <body>
+<div  class="container">
+
+  <div class="navbar">
+      <img src="logo.jpg" class="logo"></img>
+    <ul id="ul">
+	  <li><a href="qwerty">HOME</a></li>
+	  <li><a href="qwerty">ABOUT</a></li> 
+	  <li><a href="qwerty">SPECICATIONS</a></li>
+	  <li><a href="qwerty">PRODUCTS</a></li>
+	  <li><a href="qwerty">CONNECT</a></li>
+    </ul>
+  </div>
+
+    <div class="content">
+
+	   <div class="left">
+	   <h1>THE<br>REAL<br>HEALING</h1>
+	   </div>
+
+	   <div class="right">
+	   <p>click here to listen </p>
+        <img id="icon" src="play1.jpg" onclick="play" ></img>  
+		</div>
+	
+	</div>
+	
+</div>
+
+<audio id="mySong">
+  <source  src="Thattukoledhey - Bgm ! Deepti Sunaina ! Rahul Varma ! Instrumental ! Telugu.mp3" type="audio/mp3" onclick="play"></source>
+</audio>
+
+
+<script>
+var mySong= document.getElementById("mySong");
+var icon = document.getElementById("icon");
+
+icon.onclick=function(){
+    if(mySong.paused){
+	   mySong.play();
+	   icon.src="pause.png";
+
+	}else {
+	    mySong.pause();
+	   icon.src="play1.jpg";
+
+	}
+	
+}
+
+</script> 
+  
+ </body>
+</html>
